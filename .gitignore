@@ -9,10 +9,7 @@ reobf/*
 hs_err_pid*
 replay_pid*
 
-bin/*
-conf/*
 docs/*
 jars/*
 src/*
-runtime/*
 temp1/*

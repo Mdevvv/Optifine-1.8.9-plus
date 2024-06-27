@@ -1,0 +1,36 @@
+package net.optifine.plus;
+
+import java.util.ArrayList;
+
+import net.minecraft.client.Minecraft;
+import net.optifine.plus.modules.CPSMod;
+import net.optifine.plus.modules.Module;
+import net.optifine.plus.modules.ToggleSprint;
+
+public class Modules {
+	
+	private ArrayList<Module> modules = new ArrayList<Module>();
+	
+	public Modules(Minecraft mcIn) {
+		modules.add(new ToggleSprint(mcIn));
+		modules.add(new CPSMod(mcIn));
+	}
+	
+	public ArrayList<Module> getModules() {
+        return modules;
+    }
+	
+	public void show() {
+		int y = 5;
+
+		
+		for(Module current : modules) {
+			if (current.getIsToggled()) {
+				current.showProcess(5, y);
+				y += 10;
+			}
+			
+        }
+		
+	}
+}

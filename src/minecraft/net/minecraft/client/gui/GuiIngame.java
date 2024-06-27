@@ -3,6 +3,7 @@ package net.minecraft.client.gui;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
+
 import java.util.Collection;
 import java.util.List;
 import java.util.Random;
@@ -43,6 +44,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StringUtils;
 import net.minecraft.world.border.WorldBorder;
 import net.optifine.CustomColors;
+import net.optifine.plus.Modules;
 
 public class GuiIngame extends Gui
 {
@@ -92,6 +94,8 @@ public class GuiIngame extends Gui
 
     /** Used with updateCounter to make the heart bar flash */
     private long healthUpdateCounter = 0L;
+    
+    private Modules plusModules;
 
     public GuiIngame(Minecraft mcIn)
     {
@@ -103,6 +107,7 @@ public class GuiIngame extends Gui
         this.streamIndicator = new GuiStreamIndicator(mcIn);
         this.overlayPlayerList = new GuiPlayerTabOverlay(mcIn, this);
         this.func_175177_a();
+        this.plusModules = new Modules(mcIn);
     }
 
     public void func_175177_a()
@@ -344,7 +349,13 @@ public class GuiIngame extends Gui
         {
             this.overlayPlayerList.updatePlayerList(false);
         }
-
+        
+        
+        
+        plusModules.show();
+        
+        
+        
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.disableLighting();
         GlStateManager.enableAlpha();
@@ -1198,5 +1209,9 @@ public class GuiIngame extends Gui
     public void func_181029_i()
     {
         this.overlayPlayerList.func_181030_a();
+    }
+    
+    public Modules getPlusModules() {
+    	return plusModules;
     }
 }

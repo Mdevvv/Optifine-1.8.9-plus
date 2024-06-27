@@ -4,3 +4,9 @@
 1719314067073	Rename local variable 'p_i45004_5_'
 1719314130621	Rename local variable 'f1'
 1719314151869	Rename local variable 'f'
+1719496136211	Rename type 'ShowToggleSprintInGameGui'
+1719498059276	Delete element
+1719499024224	Move compilation unit
+1719499223157	Move compilation units
+1719500208768	Rename local variable 'currentModule'
+1719503987833	Rename field 'isPressed'

@@ -1,0 +1,21 @@
+package net.optifine.plus;
+
+import net.minecraft.client.Minecraft;
+
+public class ToggleSprint extends Module {
+	
+	
+	public ToggleSprint(Minecraft mcIn) {
+		super.mc = mcIn;
+	}
+	
+	public boolean getIsToggled() {
+		return super.mc.gameSettings.isToggledSprint;
+	}
+
+	@Override
+	public void showProcess() {
+		super.
+		
+	}
+}

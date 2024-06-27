@@ -1,0 +1,11 @@
+package net.optifine.plus.modules;
+
+public class CPSMod extends Module {
+
+	@Override
+	public void showProcess(int x, int y) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

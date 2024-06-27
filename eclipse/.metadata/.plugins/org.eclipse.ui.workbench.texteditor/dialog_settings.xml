@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="toggleSprint"/>
+		<item key="selection" value="maxFps"/>
 		<list key="findhistory">
+			<item value="maxFps"/>
+			<item value="limitFramerate"/>
+			<item value="FRAMERATE_LIMIT"/>
+			<item value="fps"/>
 			<item value="toggleSprint"/>
 			<item value="toggleSprint:"/>
 			<item value="loadOf"/>
@@ -19,10 +23,6 @@
 			<item value="keyBindSprint"/>
 			<item value="this.movementInput.moveForward"/>
 			<item value="Chat"/>
-			<item value="save"/>
-			<item value="options.tog"/>
-			<item value="options.togll"/>
-			<item value="option.toggl"/>
 		</list>
 		<list key="replacehistory">
 		</list>

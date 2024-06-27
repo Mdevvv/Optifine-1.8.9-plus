@@ -1,0 +1,55 @@
+package net.optifine.plus.modules;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+import org.lwjgl.input.Mouse;
+
+import net.minecraft.client.Minecraft;
+
+public class CPSMod extends Module {
+	
+	private Queue<Long> clicks = new LinkedList<>();
+	
+	private boolean isPressed;
+
+	public CPSMod(Minecraft mcIn) {
+		super(mcIn, "CPS");
+		super.isToggle = true;
+		
+	}
+	
+	
+	private void testClick() {
+		if(Mouse.isButtonDown(0) && !this.isPressed)
+		{
+			this.clicks.add(System.currentTimeMillis() + 1000L);
+			this.isPressed = true;
+		}
+		
+		else {
+			this.isPressed = false;
+		}
+			
+	}
+	
+	private int getCPS() {
+		
+		long time = System.currentTimeMillis();
+		while (!clicks.isEmpty() && clicks.peek() < time) {
+	        clicks.remove();
+	    }
+
+		return clicks.size();
+	}
+	
+
+	
+	@Override
+	public void showProcess(int x, int y) {
+		testClick();
+		super.guiString = super.name + " : " + getCPS();
+		super.showProcess(x, y);
+	}
+
+}

@@ -1,0 +1,9 @@
+package net.optifine.plus;
+
+import net.minecraft.client.gui.GuiIngame;
+
+public class ShowToggleSprintInGameGui {
+	public static void draw() {
+		
+	}
+}

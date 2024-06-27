@@ -300,6 +300,7 @@ public class GameSettings
         this.language = "en_US";
         this.forceUnicodeFont = false;
         this.mc = mcIn;
+        
         this.optionsFile = new File(p_i46326_2_, "options.txt");
 
         if (mcIn.isJava64bit() && Runtime.getRuntime().maxMemory() >= 1000000000L)

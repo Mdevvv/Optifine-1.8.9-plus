@@ -1,0 +1,11 @@
+package net.optifine.plus;
+
+import net.minecraft.client.Minecraft;
+
+public abstract class Module implements Imodule {
+	protected Minecraft mc;
+	
+	public Minecraft getMinecraft() {
+		return mc;
+	}
+}

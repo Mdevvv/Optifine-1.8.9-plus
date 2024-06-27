@@ -1,0 +1,24 @@
+package net.optifine.plus.modules;
+
+import java.awt.Color;
+
+import net.minecraft.client.Minecraft;
+
+public class ToggleSprint extends Module {
+	
+	
+	public ToggleSprint(Minecraft mcIn) {
+		super.mc = mcIn;
+		super.name = "Toggle Sprint";
+	}
+	
+	@Override
+	public boolean getIsToggled() {
+		return super.mc.gameSettings.isToggledSprint;
+	}
+
+	@Override
+	public void showProcess(int x, int y) {
+		super.getFontRenderer().drawString(super.name, x, y, Color.GREEN.getRGB());
+	}
+}

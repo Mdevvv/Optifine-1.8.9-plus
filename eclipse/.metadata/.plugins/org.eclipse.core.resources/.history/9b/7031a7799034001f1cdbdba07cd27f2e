@@ -1,0 +1,20 @@
+package net.optifine.plus;
+
+import java.awt.Color;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiIngame;
+
+public class ShowToggleSprintGuiInGame {
+	private GuiIngame ingameGUI;
+	
+	public ShowToggleSprintGuiInGame(Minecraft mcIn) {
+		this.ingameGUI = mcIn.ingameGUI;
+	}
+	
+	public void show() {
+		ingameGUI.getFontRenderer().drawString("test", 5, 5, Color.BLUE.getRGB());
+	}
+	
+	
+}

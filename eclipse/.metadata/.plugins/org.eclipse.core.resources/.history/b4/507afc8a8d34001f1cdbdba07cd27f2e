@@ -1,0 +1,15 @@
+package net.optifine.plus;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiIngame;
+
+public class ShowToggleSprintGuiInGame {
+	private GuiIngame ingameGUI;
+	
+	
+	public ShowToggleSprintGuiInGame(Minecraft mcIn) {
+		this.ingameGUI = mcIn.ingameGUI;
+	}
+	
+	
+}

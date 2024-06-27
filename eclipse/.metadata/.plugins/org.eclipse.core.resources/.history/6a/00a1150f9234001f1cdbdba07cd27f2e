@@ -1,0 +1,7 @@
+package net.optifine.plus;
+
+public abstract class Module {
+	public void showProcess() {
+		
+	}
+}

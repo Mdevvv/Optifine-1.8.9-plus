@@ -1,0 +1,4 @@
+package net.optifine.plus;
+
+public abstract class Module implements Imodule {
+}

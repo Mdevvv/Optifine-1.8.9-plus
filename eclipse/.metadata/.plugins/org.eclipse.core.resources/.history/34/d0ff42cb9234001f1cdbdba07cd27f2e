@@ -1,0 +1,8 @@
+package net.optifine.plus.interfaces;
+
+import net.minecraft.client.Minecraft;
+
+public interface Imodule {
+
+	public void showProcess();
+}

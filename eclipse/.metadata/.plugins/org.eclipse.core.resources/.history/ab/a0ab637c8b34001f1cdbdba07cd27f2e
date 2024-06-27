@@ -1,0 +1,7 @@
+package net.optifine.plus;
+
+public class ShowToggleSprintInGameGui {
+	public void setOptionValue() {
+		
+	}
+}

@@ -1,0 +1,22 @@
+package net.optifine.plus.modules;
+
+import net.minecraft.client.Minecraft;
+
+public class CPSMod extends Module {
+
+	public CPSMod(Minecraft mcIn) {
+		super(mcIn, "CPS");
+		super.isToggle = true;
+	}
+	
+	private int getCPS() {
+		return 0;
+	}
+	
+	@Override
+	public void showProcess(int x, int y) {
+		super.guiString = super.name + " : " + getCPS();
+		super.showProcess(x, y);
+	}
+
+}

@@ -1,0 +1,31 @@
+package net.optifine.plus.modules;
+
+import java.awt.Color;
+
+import net.minecraft.client.Minecraft;
+
+public class ToggleSprint extends Module {
+	
+	
+	public ToggleSprint(Minecraft mcIn) {
+		super.mc = mcIn;
+		super.name = "Toggle Sprint";
+	}
+	
+	@Override
+	public boolean getIsToggled() {
+		return super.mc.gameSettings.toggleSprint;
+	}
+	
+	private boolean getIsRunningToggled() {
+		return super.mc.gameSettings.isToggledSprint;
+	}
+	
+	@Override
+	public void showProcess(int x, int y) {
+		String s = "[" + super.name  + (this.getIsRunningToggled() ? " (Toggled)" : " (Vanilla)" ) + "]";
+		super.getFontRenderer().drawString(s, x, y+1, Color.BLACK.getRGB());
+		super.getFontRenderer().drawString(s, x, y, Color.WHITE.getRGB());
+		
+	}
+}

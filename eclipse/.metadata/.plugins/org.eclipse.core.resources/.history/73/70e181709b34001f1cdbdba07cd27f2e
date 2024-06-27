@@ -1,0 +1,37 @@
+package net.optifine.plus.modules;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
+import net.optifine.plus.interfaces.Imodule;
+
+public abstract class Module implements Imodule {
+	protected Minecraft mc;
+	protected String name;
+	protected boolean isToggle;
+	
+	public Module(Minecraft mcIn ,String name) {
+		this.mc = mcIn;
+		this.name = "Toggle Sprint";
+	}
+	
+	@Override
+	public boolean getIsToggled() {
+		return this.isToggle;
+	}
+	
+	@Override
+	public String getName() {
+		return this.name;
+	}
+	
+	@Override
+	public FontRenderer getFontRenderer()
+    {
+        return this.mc.fontRendererObj;
+    }
+	
+	@Override
+	public void showProcess(int x, int y) {
+		
+	}
+}

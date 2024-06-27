@@ -1,0 +1,17 @@
+package net.optifine.plus.modules;
+
+import net.minecraft.client.Minecraft;
+
+public class CPSMod extends Module {
+
+	public CPSMod(Minecraft mcIn) {
+		super(mcIn, "CPS");
+	}
+	
+	@Override
+	public void showProcess(int x, int y) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

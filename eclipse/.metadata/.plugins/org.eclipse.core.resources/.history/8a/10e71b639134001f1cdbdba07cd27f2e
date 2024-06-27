@@ -1,0 +1,15 @@
+package net.optifine.plus;
+
+import net.minecraft.client.Minecraft;
+
+public class ToggleSprint {
+	private Minecraft mc;
+	
+	public ToggleSprint(Minecraft mcIn) {
+		this.mc = mcIn;
+	}
+	
+	public boolean getIsToggled() {
+		return mc.gameSettings.isToggledSprint;
+	}
+}

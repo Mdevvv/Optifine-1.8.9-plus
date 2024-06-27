@@ -1,0 +1,10 @@
+package net.optifine.plus;
+
+import net.minecraft.client.Minecraft;
+
+public interface Imodule {
+	
+	Minecraft getMinecraft();
+	
+	public void showProcess();
+}

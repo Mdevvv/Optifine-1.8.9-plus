@@ -1830,6 +1830,7 @@ src\minecraft\net\optifine\player\PlayerItemParser.java
 src\minecraft\net\optifine\player\PlayerItemRenderer.java
 src\minecraft\net\optifine\player\PlayerItemsLayer.java
 src\minecraft\net\optifine\plus\Modules.java
+src\minecraft\net\optifine\plus\gui\GuiModsOptions.java
 src\minecraft\net\optifine\plus\interfaces\Imodule.java
 src\minecraft\net\optifine\plus\modules\CPSMod.java
 src\minecraft\net\optifine\plus\modules\Module.java

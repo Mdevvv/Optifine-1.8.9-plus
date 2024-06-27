@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="net.minecraft.client.settings.GameSettings.Options"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiIngame"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.FontRenderer"/>
+    <fullyQualifiedTypeName name="net.optifine.plus.ShowToggleSprintGuiInGame"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+    <fullyQualifiedTypeName name="net.optifine.plus.modules.ToggleSprint"/>
+    <fullyQualifiedTypeName name="net.optifine.plus.Modules"/>
+    <fullyQualifiedTypeName name="net.optifine.plus.modules.Module"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="org.lwjgl.input.Mouse"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="net.optifine.plus.modules.CPSMod"/>
     <fullyQualifiedTypeName name="net.minecraft.client.settings.GameSettings"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.settings.GameSettings.Options"/>
 </qualifiedTypeNameHistroy>

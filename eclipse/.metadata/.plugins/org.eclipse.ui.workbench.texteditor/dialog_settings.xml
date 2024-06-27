@@ -6,32 +6,32 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="maxFps"/>
+		<item key="selection" value="drawScreen"/>
 		<list key="findhistory">
-			<item value="maxFps"/>
-			<item value="limitFramerate"/>
-			<item value="FRAMERATE_LIMIT"/>
-			<item value="fps"/>
+			<item value="name"/>
+			<item value="drawScreen"/>
+			<item value="cpsMod"/>
+			<item value="toggles"/>
+			<item value="toggle"/>
+			<item value="cps"/>
+			<item value="CPSMOD"/>
+			<item value="setOptionValue"/>
+			<item value="TOGGLESPRINT"/>
 			<item value="toggleSprint"/>
-			<item value="toggleSprint:"/>
-			<item value="loadOf"/>
-			<item value="load"/>
-			<item value="invertMouse"/>
-			<item value="toggleS"/>
-			<item value="ToggleS"/>
-			<item value="Toggl"/>
-			<item value="keyBindSprint"/>
-			<item value="this.movementInput.moveForward"/>
-			<item value="Chat"/>
+			<item value="private static final GameSettings.Options[]"/>
+			<item value="buttonList"/>
+			<item value="107"/>
+			<item value="200"/>
+			<item value="Realms"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="208"/>
-		<item key="DIALOG_Y_ORIGIN" value="366"/>
+		<item key="DIALOG_X_ORIGIN" value="1407"/>
+		<item key="DIALOG_Y_ORIGIN" value="524"/>
 		<item key="DIALOG_WIDTH" value="322"/>
-		<item key="DIALOG_HEIGHT" value="387"/>
+		<item key="DIALOG_HEIGHT" value="389"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>

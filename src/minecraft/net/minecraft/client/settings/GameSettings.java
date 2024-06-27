@@ -500,9 +500,10 @@ public class GameSettings
         {
             this.toggleSprint = !this.toggleSprint;
         }
-        
-        if(option == GameSettings.Options.CPSMOD) {
-        	this.cpsMod = !this.cpsMod;
+
+        if (option == GameSettings.Options.CPSMOD)
+        {
+            this.cpsMod = !this.cpsMod;
         }
 
         if (option == GameSettings.Options.INVERT_MOUSE)
@@ -704,10 +705,10 @@ public class GameSettings
         {
             case TOGGLESPRINT:
                 return this.toggleSprint;
-                
+
             case CPSMOD:
-            	return this.cpsMod;
-            	
+                return this.cpsMod;
+
             case INVERT_MOUSE:
                 return this.invertMouse;
 
@@ -3028,7 +3029,7 @@ public class GameSettings
                         this.toggleSprint = Boolean.valueOf(astring[1]).booleanValue();
                         this.isToggledSprint = this.toggleSprint;
                     }
-                    
+
                     if (astring[0].equals("cpsMod") && astring.length >= 2)
                     {
                         this.cpsMod = Boolean.valueOf(astring[1]).booleanValue();
@@ -3350,7 +3351,7 @@ public class GameSettings
     {
         TOGGLESPRINT("ToggleSprint", false, true),
         CPSMOD("CPS Mod", false, true),
-        
+
         //classic settings
         INVERT_MOUSE("options.invertMouse", false, true),
         SENSITIVITY("options.sensitivity", true, false),

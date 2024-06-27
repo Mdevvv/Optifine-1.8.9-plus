@@ -38,8 +38,7 @@ public abstract class Module implements Imodule
     @Override
     public void showProcess(int x, int y)
     {
-    	
-    	//this.getFontRenderer().drawString(guiString, x, y - 1, Color.BLACK.getRGB());
+        //this.getFontRenderer().drawString(guiString, x, y - 1, Color.BLACK.getRGB());
         this.getFontRenderer().drawString(guiString, x, y + 1, Color.BLACK.getRGB());
         this.getFontRenderer().drawString(guiString, x, y, Color.WHITE.getRGB());
     }

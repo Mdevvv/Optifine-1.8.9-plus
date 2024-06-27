@@ -23,10 +23,12 @@ public class CPSMod extends Module
 
     public void addCpsClick()
     {
-    	if(this.getIsToggled())
-    		this.clicks.add(System.currentTimeMillis());
+        if (this.getIsToggled())
+        {
+            this.clicks.add(System.currentTimeMillis());
+        }
     }
-    
+
     @Override
     public boolean getIsToggled()
     {

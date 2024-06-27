@@ -12,9 +12,9 @@ import net.optifine.plus.modules.ToggleSprint;
 public class Modules
 {
     private Map<String, Module> mapModules;
-    
+
     private Minecraft mc;
-    
+
     public Modules(Minecraft mcIn)
     {
         this.mapModules = new HashMap();

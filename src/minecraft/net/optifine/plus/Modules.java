@@ -9,36 +9,41 @@ import net.optifine.plus.modules.CPSMod;
 import net.optifine.plus.modules.Module;
 import net.optifine.plus.modules.ToggleSprint;
 
-public class Modules {
-	
-	private Map<String, Module> mapModules;
-	
-	public Modules(Minecraft mcIn) {
-		
-		this.mapModules = new HashMap();
-		
-		mapModules.put(ToggleSprint.getName(), new ToggleSprint(mcIn));
-		mapModules.put(CPSMod.getName(), new CPSMod(mcIn));
-	}
-	
-	public ArrayList<Module> getModules() {
+public class Modules
+{
+    private Map<String, Module> mapModules;
+    
+    private Minecraft mc;
+    
+    public Modules(Minecraft mcIn)
+    {
+        this.mapModules = new HashMap();
+        mapModules.put(ToggleSprint.getName(), new ToggleSprint(mcIn));
+        mapModules.put(CPSMod.getName(), new CPSMod(mcIn));
+        this.mc = mcIn;
+    }
+
+    public ArrayList<Module> getModules()
+    {
         return new ArrayList<>(mapModules.values());
     }
-	
-	public Module getModule(String name) {
-		return mapModules.getOrDefault(name, null);
-	}
-	
-	public void show() {
-		int y = 5;
 
-		
-		for(Module current : this.getModules()) {
-			if(current.getIsToggled()) {
-				current.showProcess(5, y);
-				y += 15;
-			}
+    public Module getModule(String name)
+    {
+        return mapModules.getOrDefault(name, null);
+    }
+
+    public void show()
+    {
+        int y = 5;
+
+        for (Module current : this.getModules())
+        {
+            if (current.getIsToggled() && !mc.gameSettings.showDebugInfo)
+            {
+                current.showProcess(5, y);
+                y += 15;
+            }
         }
-		
-	}
+    }
 }

@@ -86,6 +86,7 @@ public class GameSettings
     public float mouseSensitivity = 0.5F;
     public boolean invertMouse;
     public boolean toggleSprint;
+    public boolean cpsMod;
 
     public boolean isToggledSprint;
 
@@ -300,7 +301,6 @@ public class GameSettings
         this.language = "en_US";
         this.forceUnicodeFont = false;
         this.mc = mcIn;
-        
         this.optionsFile = new File(p_i46326_2_, "options.txt");
 
         if (mcIn.isJava64bit() && Runtime.getRuntime().maxMemory() >= 1000000000L)
@@ -499,6 +499,10 @@ public class GameSettings
         if (option == GameSettings.Options.TOGGLESPRINT)
         {
             this.toggleSprint = !this.toggleSprint;
+        }
+        
+        if(option == GameSettings.Options.CPSMOD) {
+        	this.cpsMod = !this.cpsMod;
         }
 
         if (option == GameSettings.Options.INVERT_MOUSE)
@@ -700,7 +704,10 @@ public class GameSettings
         {
             case TOGGLESPRINT:
                 return this.toggleSprint;
-
+                
+            case CPSMOD:
+            	return this.cpsMod;
+            	
             case INVERT_MOUSE:
                 return this.invertMouse;
 
@@ -3021,6 +3028,11 @@ public class GameSettings
                         this.toggleSprint = Boolean.valueOf(astring[1]).booleanValue();
                         this.isToggledSprint = this.toggleSprint;
                     }
+                    
+                    if (astring[0].equals("cpsMod") && astring.length >= 2)
+                    {
+                        this.cpsMod = Boolean.valueOf(astring[1]).booleanValue();
+                    }
                 }
                 catch (Exception exception)
                 {
@@ -3118,6 +3130,7 @@ public class GameSettings
             printwriter.println("ofTranslucentBlocks:" + this.ofTranslucentBlocks);
             printwriter.println("key_" + this.ofKeyBindZoom.getKeyDescription() + ":" + this.ofKeyBindZoom.getKeyCode());
             printwriter.println("toggleSprint:" + this.toggleSprint);
+            printwriter.println("cpsMod:" + this.cpsMod);
             printwriter.close();
         }
         catch (Exception exception)
@@ -3336,7 +3349,8 @@ public class GameSettings
     public static enum Options
     {
         TOGGLESPRINT("ToggleSprint", false, true),
-
+        CPSMOD("CPS Mod", false, true),
+        
         //classic settings
         INVERT_MOUSE("options.invertMouse", false, true),
         SENSITIVITY("options.sensitivity", true, false),

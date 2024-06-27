@@ -8,7 +8,7 @@ guiScale:2
 particles:0
 bobView:false
 anaglyph3d:false
-maxFps:260
+maxFps:150
 fboEnable:true
 difficulty:2
 fancyGraphics:false
@@ -52,7 +52,7 @@ streamChatEnabled:0
 streamChatUserFilter:0
 streamMicToggleBehavior:0
 forceUnicodeFont:false
-allowBlockAlternatives:true
+allowBlockAlternatives:false
 reducedDebugInfo:false
 useNativeTransport:true
 entityShadows:true

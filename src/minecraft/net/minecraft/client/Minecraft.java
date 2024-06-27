@@ -1545,13 +1545,8 @@ public class Minecraft implements IThreadListener, IPlayerUsage
                 }
             }
         }
-        
-        Module moduleObject = this.ingameGUI.getPlusModules().getModule(CPSMod.getName());
-        if (moduleObject instanceof CPSMod) {
-            CPSMod cpsMod = (CPSMod) moduleObject;
-            cpsMod.addCpsClick();
-        }
-        
+
+        ((CPSMod) this.ingameGUI.getPlusModules().getModule(CPSMod.getName())).addCpsClick();
     }
 
     @SuppressWarnings("incomplete-switch")

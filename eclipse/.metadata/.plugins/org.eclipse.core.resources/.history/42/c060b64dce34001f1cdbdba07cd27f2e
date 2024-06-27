@@ -1,0 +1,13 @@
+package net.optifine.plus.gui;
+
+import net.minecraft.client.gui.GuiOptions;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.settings.GameSettings;
+
+public class GuiModsOptions extends GuiScreen {
+
+	public GuiModsOptions(GuiOptions guiOptions, GameSettings gameSettings) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

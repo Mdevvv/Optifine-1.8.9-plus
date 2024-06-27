@@ -1,0 +1,27 @@
+package net.optifine.plus.gui;
+
+import net.minecraft.client.gui.GuiOptions;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.settings.GameSettings;
+
+public class GuiModsOptions extends GuiScreen {
+
+	 private GuiScreen parentScreen;
+	 protected String screenTitle = "Mods Settings";
+	 
+	 private GameSettings options;
+	 
+	public GuiModsOptions(GuiScreen screen, GameSettings settings)
+    {
+        this.parentScreen = screen;
+        this.options = settings;
+    }
+	
+	public void initGui()
+    {
+		this.screenTitle = I18n.format("Mods Settings", new Object[0]);
+		this.buttonList.clear();
+    }
+
+}

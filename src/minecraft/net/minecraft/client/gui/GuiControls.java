@@ -17,7 +17,7 @@ public class GuiControls extends GuiScreen
     protected String screenTitle = "Controls";
 
     /** Reference to the GameSettings object. */
-    private GameSettings options;
+    private GameSettings guiGameSettings;
 
     /** The ID of the button that has been pressed. */
     public KeyBinding buttonId = null;
@@ -28,7 +28,7 @@ public class GuiControls extends GuiScreen
     public GuiControls(GuiScreen screen, GameSettings settings)
     {
         this.parentScreen = screen;
-        this.options = settings;
+        this.guiGameSettings = settings;
     }
 
     /**
@@ -51,7 +51,7 @@ public class GuiControls extends GuiScreen
             }
             else
             {
-                this.buttonList.add(new GuiOptionButton(gamesettings$options.returnEnumOrdinal(), this.width / 2 - 155 + i % 2 * 160, 18 + 24 * (i >> 1), gamesettings$options, this.options.getKeyBinding(gamesettings$options)));
+                this.buttonList.add(new GuiOptionButton(gamesettings$options.returnEnumOrdinal(), this.width / 2 - 155 + i % 2 * 160, 18 + 24 * (i >> 1), gamesettings$options, this.guiGameSettings.getKeyBinding(gamesettings$options)));
             }
 
             ++i;
@@ -87,8 +87,8 @@ public class GuiControls extends GuiScreen
         }
         else if (button.id < 100 && button instanceof GuiOptionButton)
         {
-            this.options.setOptionValue(((GuiOptionButton)button).returnEnumOptions(), 1);
-            button.displayString = this.options.getKeyBinding(GameSettings.Options.getEnumOptions(button.id));
+            this.guiGameSettings.setOptionValue(((GuiOptionButton)button).returnEnumOptions(), 1);
+            button.displayString = this.guiGameSettings.getKeyBinding(GameSettings.Options.getEnumOptions(button.id));
         }
     }
 
@@ -99,7 +99,7 @@ public class GuiControls extends GuiScreen
     {
         if (this.buttonId != null)
         {
-            this.options.setOptionKeyBinding(this.buttonId, -100 + mouseButton);
+            this.guiGameSettings.setOptionKeyBinding(this.buttonId, -100 + mouseButton);
             this.buttonId = null;
             KeyBinding.resetKeyBindingArrayAndHash();
         }
@@ -130,15 +130,15 @@ public class GuiControls extends GuiScreen
         {
             if (keyCode == 1)
             {
-                this.options.setOptionKeyBinding(this.buttonId, 0);
+                this.guiGameSettings.setOptionKeyBinding(this.buttonId, 0);
             }
             else if (keyCode != 0)
             {
-                this.options.setOptionKeyBinding(this.buttonId, keyCode);
+                this.guiGameSettings.setOptionKeyBinding(this.buttonId, keyCode);
             }
             else if (typedChar > 0)
             {
-                this.options.setOptionKeyBinding(this.buttonId, typedChar + 256);
+                this.guiGameSettings.setOptionKeyBinding(this.buttonId, typedChar + 256);
             }
 
             this.buttonId = null;
@@ -161,7 +161,7 @@ public class GuiControls extends GuiScreen
         this.drawCenteredString(this.fontRendererObj, this.screenTitle, this.width / 2, 8, 16777215);
         boolean flag = true;
 
-        for (KeyBinding keybinding : this.options.keyBindings)
+        for (KeyBinding keybinding : this.guiGameSettings.keyBindings)
         {
             if (keybinding.getKeyCode() != keybinding.getKeyCodeDefault())
             {

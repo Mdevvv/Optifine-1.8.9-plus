@@ -94,7 +94,7 @@ public class GuiIngame extends Gui
 
     /** Used with updateCounter to make the heart bar flash */
     private long healthUpdateCounter = 0L;
-    
+
     private Modules plusModules;
 
     public GuiIngame(Minecraft mcIn)
@@ -351,10 +351,7 @@ public class GuiIngame extends Gui
         }
         
         
-        
         plusModules.show();
-        
-        
         
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.disableLighting();
@@ -1210,8 +1207,9 @@ public class GuiIngame extends Gui
     {
         this.overlayPlayerList.func_181030_a();
     }
-    
-    public Modules getPlusModules() {
-    	return plusModules;
+
+    public Modules getPlusModules()
+    {
+        return plusModules;
     }
 }
